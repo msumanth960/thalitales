@@ -142,22 +142,25 @@ const BookingSection = () => {
     return (
       <section
         id="booking"
-        className="py-20 bg-gradient-to-br from-goa-cream to-goa-yellow"
+        className="py-20"
+        style={{
+          background: 'linear-gradient(180deg, #ffffff 0%, #f0f8f0 50%, #ffffff 100%)',
+        }}
       >
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8 text-center slide-up">
+          <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8 text-center slide-up border border-gray-200">
             <div className="text-6xl mb-4">✅</div>
-            <h2 className="text-3xl font-display font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl font-display font-bold text-black mb-4">
               Thank you, {formData.name}!
             </h2>
-            <p className="text-lg text-gray-700 mb-2">
+            <p className="text-lg text-black mb-2">
               Your table <strong>{formData.tableNumber}</strong> booking request
               has been noted.
             </p>
-            <p className="text-base text-gray-600 mb-4">
+            <p className="text-base text-black mb-4">
               Selected items: <strong>{getSelectedItemsNames()}</strong>
             </p>
-            <p className="text-sm text-gray-500 italic">
+            <p className="text-sm text-black/70 italic">
               (Demo only – not a real booking)
             </p>
           </div>
@@ -169,20 +172,23 @@ const BookingSection = () => {
   return (
     <section
       id="booking"
-      className="py-20 bg-gradient-to-br from-goa-cream to-goa-yellow"
+      className="py-20"
+      style={{
+        background: 'linear-gradient(180deg, #ffffff 0%, #f0f8f0 50%, #ffffff 100%)',
+      }}
     >
       <div className="container mx-auto px-4">
         <div
           className={`max-w-3xl mx-auto ${isVisible ? 'fade-in' : 'opacity-0'}`}
         >
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-800 mb-4">
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-4">
               Book Your Table & Thali
             </h2>
-            <p className="text-lg text-gray-600 mb-2">
+            <p className="text-lg text-black mb-2">
               Reserve & Relish
             </p>
-            <p className="text-sm text-gray-500 italic">
+            <p className="text-sm text-black/70 italic">
               * This is a dummy demo form (no real booking)
             </p>
           </div>
@@ -195,7 +201,7 @@ const BookingSection = () => {
             <div>
               <label
                 htmlFor="name"
-                className="block text-gray-700 font-medium mb-2"
+                className="block text-black font-medium mb-2"
               >
                 Name <span className="text-red-500">*</span>
               </label>
@@ -207,7 +213,7 @@ const BookingSection = () => {
                 onChange={handleChange}
                 className={`w-full px-4 py-3 rounded-lg border-2 ${
                   errors.name ? 'border-red-500' : 'border-gray-300'
-                } focus:outline-none focus:border-goa-teal transition-colors`}
+                } focus:outline-none focus:border-green transition-colors`}
                 placeholder="Enter your name"
               />
               {errors.name && (
@@ -219,7 +225,7 @@ const BookingSection = () => {
             <div>
               <label
                 htmlFor="phone"
-                className="block text-gray-700 font-medium mb-2"
+                className="block text-black font-medium mb-2"
               >
                 Phone Number <span className="text-red-500">*</span>
               </label>
@@ -231,7 +237,7 @@ const BookingSection = () => {
                 onChange={handleChange}
                 className={`w-full px-4 py-3 rounded-lg border-2 ${
                   errors.phone ? 'border-red-500' : 'border-gray-300'
-                } focus:outline-none focus:border-goa-teal transition-colors`}
+                } focus:outline-none focus:border-green transition-colors`}
                 placeholder="Enter your phone number"
               />
               {errors.phone && (
@@ -243,7 +249,7 @@ const BookingSection = () => {
             <div>
               <label
                 htmlFor="tableNumber"
-                className="block text-gray-700 font-medium mb-2"
+                className="block text-black font-medium mb-2"
               >
                 Table Number <span className="text-red-500">*</span>
               </label>
@@ -254,7 +260,7 @@ const BookingSection = () => {
                 onChange={handleChange}
                 className={`w-full px-4 py-3 rounded-lg border-2 ${
                   errors.tableNumber ? 'border-red-500' : 'border-gray-300'
-                } focus:outline-none focus:border-goa-teal transition-colors`}
+                } focus:outline-none focus:border-green transition-colors`}
               >
                 <option value="">Select a table</option>
                 {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
@@ -272,7 +278,7 @@ const BookingSection = () => {
 
             {/* Food Type */}
             <div>
-              <label className="block text-gray-700 font-medium mb-2">
+              <label className="block text-black font-medium mb-2">
                 Veg / Non-Veg <span className="text-red-500">*</span>
               </label>
               <div className="flex gap-4">
@@ -283,9 +289,9 @@ const BookingSection = () => {
                     value="veg"
                     checked={formData.foodType === 'veg'}
                     onChange={handleChange}
-                    className="w-5 h-5 text-goa-teal focus:ring-goa-teal"
+                    className="w-5 h-5 text-green focus:ring-green"
                   />
-                  <span className="text-gray-700">Veg</span>
+                  <span className="text-black">Veg</span>
                 </label>
                 <label className="flex items-center space-x-2 cursor-pointer">
                   <input
@@ -294,9 +300,9 @@ const BookingSection = () => {
                     value="non-veg"
                     checked={formData.foodType === 'non-veg'}
                     onChange={handleChange}
-                    className="w-5 h-5 text-goa-teal focus:ring-goa-teal"
+                    className="w-5 h-5 text-green focus:ring-green"
                   />
-                  <span className="text-gray-700">Non-Veg</span>
+                  <span className="text-black">Non-Veg</span>
                 </label>
               </div>
               {errors.foodType && (
@@ -306,12 +312,12 @@ const BookingSection = () => {
 
             {/* Items Selection */}
             <div>
-              <label className="block text-gray-700 font-medium mb-2">
+              <label className="block text-black font-medium mb-2">
                 Select Items <span className="text-red-500">*</span>
               </label>
               <div className="border-2 border-gray-300 rounded-lg p-4 max-h-64 overflow-y-auto">
                 {filteredItems.length === 0 ? (
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-black/70 text-sm">
                     Please select Veg or Non-Veg first
                   </p>
                 ) : (
@@ -325,12 +331,12 @@ const BookingSection = () => {
                           type="checkbox"
                           checked={formData.items.includes(item.id)}
                           onChange={() => handleItemChange(item.id)}
-                          className="w-5 h-5 text-goa-teal focus:ring-goa-teal rounded"
+                          className="w-5 h-5 text-green focus:ring-green rounded"
                         />
-                        <span className="text-gray-700 flex-1">
+                        <span className="text-black flex-1">
                           {item.name}
                         </span>
-                        <span className="text-gray-500 text-sm">{item.price}</span>
+                        <span className="text-black/70 text-sm">{item.price}</span>
                       </label>
                     ))}
                   </div>
@@ -345,7 +351,7 @@ const BookingSection = () => {
             <div>
               <label
                 htmlFor="time"
-                className="block text-gray-700 font-medium mb-2"
+                className="block text-black font-medium mb-2"
               >
                 Preferred Time
               </label>
@@ -355,7 +361,7 @@ const BookingSection = () => {
                 name="time"
                 value={formData.time}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-goa-teal transition-colors"
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green transition-colors"
               />
             </div>
 
@@ -363,7 +369,7 @@ const BookingSection = () => {
             <div>
               <label
                 htmlFor="specialRequests"
-                className="block text-gray-700 font-medium mb-2"
+                className="block text-black font-medium mb-2"
               >
                 Special Requests
               </label>
@@ -373,7 +379,7 @@ const BookingSection = () => {
                 value={formData.specialRequests}
                 onChange={handleChange}
                 rows="4"
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-goa-teal transition-colors resize-none"
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green transition-colors resize-none"
                 placeholder="Any special requests or dietary preferences..."
               ></textarea>
             </div>
@@ -381,7 +387,7 @@ const BookingSection = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-4 bg-goa-teal text-white rounded-full font-semibold text-lg hover:bg-goa-blue transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="w-full py-4 bg-gradient-to-r from-green to-saffron text-white rounded-full font-semibold text-lg hover:opacity-90 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Submit Booking Request
             </button>

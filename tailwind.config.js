@@ -7,11 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        'goa-cream': '#FFF8E7',
-        'goa-yellow': '#F5E6D3',
-        'goa-green': '#E8F5E9',
-        'goa-teal': '#B2DFDB',
-        'goa-blue': '#80CBC4',
+        'saffron': '#FF9933',
+        'saffron-light': '#FFB366',
+        'green': '#81C784',
+        'green-light': '#A5D6A7',
       },
       fontFamily: {
         'display': ['Georgia', 'serif'],

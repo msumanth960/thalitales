@@ -4,21 +4,24 @@ const ContactFooter = () => {
   return (
     <footer
       id="contact"
-      className="bg-gradient-to-br from-gray-800 to-gray-900 text-white py-16"
+      className="text-black py-16 border-t border-gray-200"
+      style={{
+        background: 'linear-gradient(180deg, #ffffff 0%, #f5fef5 100%)',
+      }}
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Address */}
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-display font-bold mb-4">📍 Location</h3>
-            <p className="text-lg text-gray-300 mb-2">
+            <p className="text-lg text-black mb-2">
               18th June Rd, Panjim, Goa.
             </p>
             <a
               href="https://maps.google.com/?q=18th+June+Rd,+Panjim,+Goa"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-4 px-6 py-2 bg-goa-teal text-white rounded-full font-medium hover:bg-goa-blue transform hover:scale-105 transition-all duration-300"
+              className="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-green to-saffron text-white rounded-full font-medium hover:opacity-90 transform hover:scale-105 transition-all duration-300"
             >
               Get Directions
             </a>
@@ -31,7 +34,7 @@ const ContactFooter = () => {
               href="https://www.instagram.com/thalitalesgoa?igsh=MXQ3MTRpb3Q0aHc1bQ=="
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors text-lg font-medium"
+              className="inline-flex items-center space-x-2 text-pink-500 hover:text-pink-600 transition-colors text-lg font-medium"
             >
               <svg
                 className="w-6 h-6"
@@ -47,15 +50,15 @@ const ContactFooter = () => {
           {/* Hashtags */}
           <div className="text-center md:text-right">
             <h3 className="text-2xl font-display font-bold mb-4">Join the Story</h3>
-            <p className="text-gray-300 text-lg">
+            <p className="text-black text-lg">
               #Thalitales #Goa #Panjim
             </p>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-700 pt-8 text-center">
-          <p className="text-gray-400">
+        <div className="border-t border-gray-200 pt-8 text-center">
+          <p className="text-black/70">
             © {currentYear} THALItales – Where home food meets beach mood.
           </p>
         </div>
